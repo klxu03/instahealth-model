@@ -1,0 +1,63 @@
+My ... hurts
+
+general	abdomen
+general	back
+heart	chest
+general	ear
+general	head
+general	pelvis
+teeth	tooth
+general	rectum
+skin	skin
+general	Extremities
+general	leg
+general	Chronic pain
+
+
+I feel:
+
+general	Chills
+general	Fever
+general	Paresthesia (numbness, tingling, electric tweaks)
+general	Light-headed
+general	Dizzy
+general	Dizzy – about to black out
+general	Dizzy – with the room spinning around me
+teeth	My mouth is dry
+general	Nauseated
+general	Sick
+general	like I have the flu
+general	like I have to vomit
+heart,general	Short of breath
+general	Sleepy
+general,skin	Sweaty
+general	Thirsty
+general	Tired
+general	Weak
+
+
+I can't:
+
+heart,general	Breathe normally
+ear	Hear normally:
+ear	losing hearing
+ear	sounds are too loud
+ear	ringing or hissing in my ears
+general	Move one side – arm and/or leg
+general	Pass a bowel action normally
+general	Pass urine normally
+general	Remember normally
+eye	See properly:
+eye	Blindness
+eye	blurred vision
+eye	double vision
+general	Sleep normally
+general	Smell things normally
+teeth	Speak normally
+general	Stop passing watery bowel actions
+skin	Stop scratching
+skin	Stop sweating
+teeth,general	Swallow normally
+teeth,general	Taste properly
+general	Walk normally
+general	Write normally
