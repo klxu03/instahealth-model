@@ -1,5 +1,5 @@
 python data_utils.py --bsz_per_host=32 --num_core_per_host=16 --seq_len=512 --reuse_len=256 --input_glob=*.txt --save_dir=tfrecords --num_passes=20 --bi_data=True --sp_path=spiece.model --mask_alpha=6 --mask_beta=1 --num_predict=85
 
-python train.py --record_info_dir=tfrecords/tfrecords --train_batch_size=2048 --seq_len=512 --reuse_len=256 --mem_len=384 --perm_size=256 --n_layer=24 --d_model=1024 --d_embed=1024 --n_head=16 --d_head=64 --d_inner=4096 --untie_r=True --mask_alpha=6 --mask_beta=1 --num_predict=85
+python train.py --record_info_dir=tfrecords/tfrecords --train_batch_size=32 --seq_len=512 --reuse_len=256 --mem_len=384 --perm_size=256 --n_layer=24 --d_model=128 --d_embed=128 --n_head=16 --d_head=64 --d_inner=256 --untie_r=True --mask_alpha=6 --mask_beta=1 --num_predict=85
 
 python run_classifier.py --do_train=True --do_eval=True --task_name=doctor --data_dir=data --spiece_model_file=spiece.model --model_config_path=xlnet_config.json --output_dir=output --model_dir=output/model --uncased=False --max_seq_length=128 --eval_batch_size=8 --num_hosts=1 --num_core_per_host=1 --eval_all_ckpt=True --is_regression=True
