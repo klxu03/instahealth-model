@@ -1,0 +1,313 @@
+/*==============================================================
+
+SAS Value Labels for the 2018 National Electronic Health Records Survey (NEHRS) public use file dataset 
+
+You should run these prior to running any SAS analyses on the nehrs2018 dataset.
+
+==============================================================*/
+
+proc format;
+	value psizecatpf
+	-9="Blank"
+	1="1 physician"
+	2="2-3 physicians"
+	3="4-10 physicians"
+	4="11-50 physicians"
+	5="More than 50 physicians";
+
+	value numlocpf
+	-9="Blank"
+	1="1 location"
+	2="2 locations"
+	3="3 or more locations";
+
+	value midlevp1pf
+	-9="Blank"
+	0="0 midlevel providers"
+	1="1 midlevel provider"
+	2="2 midlevel providers"
+	3="3 midlevel providers"
+	4="4 or more midlevel providers";
+
+	value settingpf
+	1='Private solo or group practice'
+	2='Other setting';
+
+	value ninsf
+	1='Yes'
+	2='No'
+	-8="Don't know"
+	-9='Blank'
+	-7='Not applicable';
+
+	value ehrsatf
+	1='Very satisfied'
+	2='Somewhat satisfied'
+	3='Neither satisfied nor dissatisfied'
+	4='Somewhat dissatisfied'
+	5='Very dissatisfied'
+	6='-Not applicable'
+	-7='Not applicable'
+	-9='Blank';
+
+	value osrndk
+	1='Often'
+	2='Sometimes'
+	3='Rarely'
+	4='Never'
+	6='-Not applicable'
+	-8="Don't know"
+	-9='Blank'
+    	-7='Not applicable';
+
+	value yndk
+	1='Yes'
+	2='No'
+	4='-Not applicable'
+	-8="Don't know"
+	-9='Blank'
+	-7='Not applicable';
+
+	value tempcustom
+	1='A great extent'
+	2='Somewhat'
+	3='Very little or not at all'
+	-8="Don't know"
+	-7='Not applicable'
+	-9='Blank';
+
+	value notes
+	1='Very easy'
+	2='Somewhat easy'
+	3='Somewhat difficult'
+	4='Very difficult'
+	-7='Not applicable'
+	-9='Blank'
+	-8="Don't know";
+
+	value agreed
+	1='Strongly agree'
+	2='Somewhat agree'
+	3='Somewhat disagree'
+	4='Strongly disagree'
+	5='-Not applicable'
+	-7='Not applicable'
+	-9='Blank';
+
+	value pha1x
+	0='Box is not marked' 
+    	1='Box is marked' 
+	-7='Not applicable';
+
+	value pha2x
+	0='Box is not marked' 
+    	1='Box is marked' 
+	-7='Not applicable';
+
+	value pha3x
+	0='Box is not marked' 
+    	1='Box is marked' 
+	-7='Not applicable';
+
+	value pha4x
+	0='Box is not marked' 
+    	1='Box is marked' 
+	-7='Not applicable';
+
+	value reason1x
+	0='Box is not marked' 
+    	1='Box is marked' 
+	-7='Not applicable';
+
+	value reason2x
+	0='Box is not marked' 
+    	1='Box is marked' 
+	-7='Not applicable';
+
+	value reason3x
+	0='Box is not marked' 
+    	1='Box is marked' 
+	-7='Not applicable';
+
+	value reason4x
+	0='Box is not marked' 
+    	1='Box is marked' 
+	-7='Not applicable';
+
+	value reason5x
+	1='Box is marked'
+	0='Box is not marked'
+	-7='Not applicable';
+
+	value reason6x
+	0='Box is not marked' 
+    	1='Box is marked' 
+	-7='Not applicable';
+
+	value progf
+	1='Box is marked'
+	0='Box is not marked';
+
+	value timeoutf
+	1='None'
+	2='Less than 1 hour'
+	3='1 to 2 hours'
+	4='Greater than 2 hours to 4 hours'
+	5='More than 4 hours'
+	-7='Not applicable'
+	-9='Blank'
+	-8="Don't know";
+
+	value easedocf
+	1='Very easy'
+	2='Somewhat easy'
+	3='Somewhat difficult'
+	4='Very difficult'
+	5='-Not applicable'
+	-7='Not applicable'
+	-9='Blank';
+
+	value cselectf
+	1='Often'
+	2='Sometimes'
+	3='Rarely or Never'
+	-7='Not applicable'
+	-9='Blank'
+	-8="Don't know";
+
+	value pdmpcheckf
+	1='Use EHR system'
+	2='Use system outside EHR'
+	-7='Not applicable'
+	-9='Blank'
+	-8="Don't know";
+
+	VALUE PDMP1F
+	1='Box is marked'
+	0='Box is not marked'
+	-7='Not applicable';
+
+	value sendrec
+	1='Both Send & Receive Electronically'
+	2='Send Electronically only'
+	3='Receive Electronically only'
+	4='Do not Send or Receive Electronically'
+	-7='Not applicable'
+	-9='Blank';
+
+	value cinpocf
+	1='Often'
+	2='Sometimes'
+	3='Rarely'
+	4='Never'
+	6="I do not see patients outside my organization"
+	-8="Don't know"
+	-9='Blank'
+    	-7='Not applicable';
+
+	value multif
+	1="Single specialty practice"
+	2="Multi specialty practice";
+
+	value owns
+	1="Physician/physician group"
+	2="Insurance company, health plan or HMO"
+	3="Community health center"
+	4="Medical/academic health center"
+	5="Other hospital"
+	6="Other health care corporation"
+	7="Other";
+
+	value pdmpusef
+	1='Very easy'
+	2='Somewhat easy'
+	3='Somewhat difficult'
+	4='Very difficult'
+	-7='Not applicable'
+	-8="Don't know"
+	-9='Blank';
+
+	value speccat 
+	1='Primary care specialty' 
+	2='Surgical care specialty' 	
+	3='Medical care specialty';
+	
+	value page50f
+	1='Under 50 years' 
+	2='50+ years';
+
+	value dispemrf
+	1='Complete' ;
+
+	value multir1f
+	1='Single specialty'
+	2='Multi-specialty'
+	3='Solo practice';
+
+	value locsizcatf
+	1='Solo practice' 
+	2='Two physicians' 
+	3='3-5 physicians' 
+	4='6-10 physicians' 		
+	5='11+ physicians' 
+	-9='Blank';
+
+	value wcompemrf
+	1="The sampled physician" 
+	2="Office staff" 
+	3="Other" 
+	-9="Blank";
+
+	value comptypef
+	1='Mail'
+	2='Telephone'
+	3='Web';
+
+	value wavecompf
+	1='1st mailing'
+	2='2nd mailing'
+	3='3rd mailing'
+	4='Survey completed over the phone'
+	5='Web';
+
+	value mddof
+	1="Medical Doctor (MD)" 
+	2="Doctor of Osteopathy (DO)";
+
+	value physexf
+	1="Female" 
+	2="Male";
+
+	value PAGE50f
+	1='Under 50 years' 
+	2='50+ years';
+	
+	value pctmcaidpf
+	-9="Blank"
+	0="0.0%"
+	1="1.0 to 24.0%"
+	2="25.0 to 50.0%"
+	3="Over 50.0%";
+
+	value nomipsapmf
+	0='Box is not marked' 
+    	1='Box is marked';
+
+	value ehrnamef
+	1='Allscripts'
+	2='Amazing Charts'
+	3='athenahealth'
+	4='Cerner'
+	5='eClinicalWorks'
+	6='e-MDs'
+	7='Epic'
+	8='GE/Centricity'
+	9='Modernizing Medicine'
+	10= 'NextGen'
+	11='Practice Fusion'
+	12='Sage/Vitera/Greenway'
+	13='Other'
+	14='Unknown'
+	-7= 'Not Applicable'
+	-9='Blank';
+run;
